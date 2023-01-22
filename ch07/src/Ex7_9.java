@@ -69,7 +69,7 @@ class Buyer2 {
 				break;
 			sum += cart[i].price;
 			itemList += cart[i] + ", ";
-			// itemList += cart[i].toString + ", "; 과 같다
+			// itemList += cart[i].toString() + ", "; 과 같다
 		}
 		System.out.println("구입하신 물품의 총 금액은 " + sum + "원입니다.");
 		System.out.println("구입하신 물품은 " + itemList + "입니다.");
