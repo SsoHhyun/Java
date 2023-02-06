@@ -1,9 +1,10 @@
 package video.me;
 
 public class Member {
-	String id;
-	String name;
-	int age;
+	private String id;
+	private String name;
+	private int age;
+	private Video rentalVideo;
 	
 	public Member() {
 	}
@@ -12,6 +13,24 @@ public class Member {
 		this.id = id;
 		this.name = name;
 		this.age = age;
+	}
+	
+	public Video getRentalVideo() {
+		return rentalVideo;
+	}
+
+	public void setRentalVideo(Video rentalVideo) {
+		this.rentalVideo = rentalVideo;
+	}
+
+	public void show() {
+		System.out.println("아이디: " +id);
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+	}
+	
+	public void rental (Video video) {
+		rentalVideo = video;
 	}
 
 	public String getId() {
