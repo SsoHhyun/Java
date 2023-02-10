@@ -23,13 +23,20 @@ public class MatcherPractice2 {
 //			if(m.matches())
 //				System.out.println(data[i]);
 //		}
-		
-		String src = "ab?cd?ef?gh?ij";
-		String reg = "(\\w*)";
-		Pattern P = Pattern.compile(reg);
-		Matcher m = P.matcher(src);
-		while(m.find()) {
-			System.out.println(m.group());
+
+//		String src = "ab?cd?ef?gh?ij";
+//		String reg = "(\\w*)";
+//		Pattern P = Pattern.compile(reg);
+//		Matcher m = P.matcher(src);
+//		while (m.find()) {
+//			System.out.println(m.group());
+//		}
+		String str = "HP: 010-1111-1111, HOME: 02-222-2222";
+		String s = "(\\d{2,3}-\\d{3,4}-\\d{4})";
+		Pattern pp = Pattern.compile(s);
+		Matcher mm = pp.matcher(str);
+		while (mm.find()) {
+			System.out.println(mm.group());
 		}
 	}
 
