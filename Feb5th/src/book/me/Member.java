@@ -1,37 +1,30 @@
-package video.me;
+package book.me;
 
 public class Member {
 	private String id;
 	private String name;
 	private int age;
-	private Video rentalVideo;
+	private Book rentalBook;
 	
 	public Member() {
 	}
 
 	public Member(String id, String name, int age) {
+		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 	}
 	
-	public Video getRentalVideo() {
-		return rentalVideo;
-	}
-
-	public void setRentalVideo(Video rentalVideo) {
-		this.rentalVideo = rentalVideo;
-	}
-
-	public void show() {
-		System.out.println("아이디: " +id);
-		System.out.println("이름: " + name);
-		System.out.println("나이: " + age);
-		rentalVideo.showVideo();
+	public void rental(Book b) {
+		rentalBook = b;
 	}
 	
-	public void rental (Video video) {
-		rentalVideo = video;
+	public void show() {
+		System.out.println("아이디: " + id);
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+		rentalBook.show();
 	}
 
 	public String getId() {
@@ -57,4 +50,18 @@ public class Member {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+	public Book getRentalBook() {
+		return rentalBook;
+	}
+
+	public void setRentalBook(Book rentalBook) {
+		this.rentalBook = rentalBook;
+	}
+	
+	
+	
+	
+	
+
 }
